@@ -5,14 +5,10 @@ this.addEventListener("install", (e) => {
     caches.open(cacheData).then((cache) =>
       cache.addAll([
         //deployed site:
-        // "https://cocky-galileo-58f5a9.netlify.app/",
-        // "/static/css/main.21ca11e7.chunk.css",
-        // "/static/js/2.d8b0c408.chunk.js",
-        // "/static/js/main.1cb9d11d.chunk.js",
         "https://quran16.netlify.app/",
         "/static/css/main.98f2faf0.chunk.css",
         "/static/js/2.b02f468c.chunk.js",
-        "/page-images/*",
+        // "/page-images/*",
         "/static/media/mosque.1a799f13.jpg",
         "manifest.json",
         "sw.js",
