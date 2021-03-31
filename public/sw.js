@@ -9,11 +9,15 @@ this.addEventListener("install", (e) => {
         // "/static/css/main.21ca11e7.chunk.css",
         // "/static/js/2.d8b0c408.chunk.js",
         // "/static/js/main.1cb9d11d.chunk.js",
+        "https://quran16.netlify.app/",
+        "/static/css/main.98f2faf0.chunk.css",
+        "/static/js/2.b02f468c.chunk.js",
+        "/page-images/*",
         "/static/media/mosque.1a799f13.jpg",
         "manifest.json",
         "sw.js",
         "logo192.png",
-        "/favicon.ico",
+        "favicon.ico",
       ])
     )
   );
