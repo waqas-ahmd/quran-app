@@ -11,7 +11,7 @@ for (var i = 1; i <= 550; i++) {
   } else if (i < 1000) {
     num = "0" + i;
   }
-  arrayOfImages[i] = `/page-images/${num}.png`;
+  arrayOfImages[i - 1] = `/page-images/${num}.png`;
 }
 
 console.log(arrayOfImages);
@@ -21,6 +21,7 @@ this.addEventListener("install", (e) => {
     caches.open(cacheData).then((cache) =>
       cache.addAll([
         //deployed site:
+        ...arrayOfImages,
         "https://quran16.netlify.app/",
         "/static/css/main.98f2faf0.chunk.css",
         "/static/js/2.b02f468c.chunk.js",
