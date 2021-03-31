@@ -1,13 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  background-image: url(images/mosque.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.urdu {
+  font-family: "Harmattan", sans-serif;
+}
+.homepage {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: beige; */
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: homepage-animation 1.5s ease-out;
+  font-size: xx-large;
+}
+
+.homepage .subheading {
+  color: rgb(85, 85, 85);
+}
+
+@keyframes homepage-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  background-color: rgb(56, 56, 56);
+  padding: 6px;
+  display: flex;
+  flex-direction: row;
+  color: rgb(0, 204, 255);
+}
+
+.navbar .container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  max-width: 1000px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.pagesContainer {
+  height: calc(100vh - 40px);
+  overflow: hidden;
+  text-align: center;
+  background-color: rgba(173, 255, 248, 0.705);
+}
+
+.pagesContainer img {
+  height: 100%;
+  mix-blend-mode: multiply;
+  user-select: none;
+}
+
+.navbar .navigation,
+.navbar .functions {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .functions div {
+  padding: 0px 5px;
+}
+
+.negative-image {
+  filter: invert();
+  mix-blend-mode: lighten;
+}
+
+.nav-icon {
+  transition: 0.2s all ease;
+}
+
+.nav-icon:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
 }

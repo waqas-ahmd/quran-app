@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+import Page from "./pages/Page";
+import { LOCAL_STORAGE_KEY_PAGES } from "./utils/constants";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 function App() {
+  const pageNumber = localStorage.getItem(LOCAL_STORAGE_KEY_PAGES) || 0;
+  const handle = useFullScreenHandle();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FullScreen handle={handle}>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home pageNumber={pageNumber} />} />
+          <Route path="/page/:id" element={<Page fullscreen={handle} />} />
+        </Routes>
+      </div>
+    </FullScreen>
   );
 }
 
