@@ -21,7 +21,6 @@ this.addEventListener("install", (e) => {
     caches.open(cacheData).then((cache) =>
       cache.addAll([
         //deployed site:
-        ...arrayOfImages,
         "https://quran16.netlify.app/",
         "/static/css/main.98f2faf0.chunk.css",
         "/static/js/2.b02f468c.chunk.js",
