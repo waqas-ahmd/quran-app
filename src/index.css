@@ -74,8 +74,10 @@ code {
 
 .pagesContainer {
   height: calc(100vh - 40px);
-  overflow: hidden;
-  text-align: center;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
   background-color: rgba(173, 255, 248, 0.705);
 }
 
@@ -83,6 +85,17 @@ code {
   height: 100%;
   mix-blend-mode: multiply;
   user-select: none;
+}
+
+@media screen and (max-width: 720px) {
+  .pagesContainer {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .pagesContainer img {
+    height: calc(100vh + 20px);
+  }
 }
 
 .navbar .navigation,
