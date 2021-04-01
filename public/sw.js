@@ -23,7 +23,7 @@ this.addEventListener("install", (e) => {
         //deployed site:
         // ...arrayOfImages,
         "https://quran16.netlify.app/",
-        "/static/css/main.28e81a61.chunk.css",
+        "/static/css/main.b4d26306.chunk.css",
         "/static/js/2.b02f468c.chunk.js",
         "/static/media/mosque.1a799f13.jpg",
         "manifest.json",
