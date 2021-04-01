@@ -57,10 +57,14 @@ code {
 
 .navbar {
   background-color: rgb(56, 56, 56);
+  z-index: 10;
   padding: 6px;
   display: flex;
   flex-direction: row;
   color: rgb(0, 204, 255);
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .navbar .container {
@@ -73,6 +77,7 @@ code {
 }
 
 .pagesContainer {
+  margin-top: 40px;
   height: calc(100vh - 40px);
   overflow-y: hidden;
   display: flex;
@@ -95,6 +100,7 @@ code {
 
   .pagesContainer img {
     height: calc(100vh - 40px);
+    object-fit: contain;
   }
 }
 

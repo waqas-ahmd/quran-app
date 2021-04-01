@@ -14,8 +14,6 @@ for (var i = 1; i <= 550; i++) {
   arrayOfImages[i - 1] = `/page-images/${num}.png`;
 }
 
-console.log(arrayOfImages);
-
 this.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(cacheData).then((cache) =>

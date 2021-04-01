@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { useLocation, useNavigate } from "react-router-dom";
 import { createPageNumber } from "../utils/createPageNumber";
@@ -36,7 +36,9 @@ const Page = ({ fullscreen }) => {
     e.deltaY > 0 ? nextPage() : prevPage();
   };
 
-  console.log("darkmode:", darkMode);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   return (
     <div>
