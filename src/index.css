@@ -90,7 +90,7 @@ code {
 @media screen and (max-width: 720px) {
   .pagesContainer {
     height: auto;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .pagesContainer img {
