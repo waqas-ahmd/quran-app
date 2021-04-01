@@ -114,6 +114,10 @@ code {
   padding: 0px 5px;
 }
 
+.navbar .navigation {
+  padding: 0px 10px;
+}
+
 .negative-image {
   filter: invert();
   mix-blend-mode: lighten;
