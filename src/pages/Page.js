@@ -45,9 +45,9 @@ const Page = ({ fullscreen }) => {
   useEffect(() => {
     // var left = window.outerWidth;
     if (isPrev) {
-      window.scrollTo({ left: 0, behavior: "smooth" });
+      window.scrollTo({ top: 100000, behavior: "smooth" });
     } else {
-      window.scrollTo({ left: 100000, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   });
 
