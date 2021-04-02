@@ -92,15 +92,23 @@ code {
   user-select: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 700px) {
   .pagesContainer {
-    height: auto;
-    flex-direction: column-reverse;
+    height: calc(100vh - 57px);
+    width: 200vw;
+    overflow-y: hidden;
+    /* flex-direction: column-reverse; */
   }
 
   .pagesContainer img {
-    height: calc(100vh - 40px);
+    /* height: calc(100vh - 40px); */
+    height: 100%;
+    width: 100vw;
     object-fit: contain;
+  }
+
+  .App {
+    width: 200vw;
   }
 }
 

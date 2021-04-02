@@ -101,7 +101,9 @@ const Navbar = ({
               <ChevronLeftRoundedIcon onClick={nextPage} />
             </MyTooltip>
           </div>
-          <div className="urdu">{pageNum} : صفحہ نمبر</div>
+          <div className="urdu">
+            {pageNum + 1}-{pageNum} : صفحہ نمبر
+          </div>
           <div className="nav-icon">
             <MyTooltip title="Previous Page">
               <ChevronRightRoundedIcon onClick={prevPage} />

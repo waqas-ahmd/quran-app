@@ -15,9 +15,15 @@ const Page = ({ fullscreen }) => {
     JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_VISION)) || false
   );
   const location = Number(useLocation().pathname.replace("/page/", ""));
+  const state = useLocation().state;
+  const isPrev = state ? state.isPrev : false;
   const paraNum = getParaNumber(location);
-  const nextPage = () => location < 548 && navigate(`/page/${location + 2}`);
-  const prevPage = () => location > 1 && navigate(`/page/${location - 2}`);
+  const nextPage = () =>
+    location < 548 &&
+    navigate(`/page/${location + 2}`, { state: { isPrev: false } });
+  const prevPage = () =>
+    location > 1 &&
+    navigate(`/page/${location - 2}`, { state: { isPrev: true } });
   const nextPara = () =>
     paraNum < 30 && navigate(`/page/${PARAS_PAGES[paraNum]}`);
   const prevPara = () =>
@@ -37,7 +43,12 @@ const Page = ({ fullscreen }) => {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // var left = window.outerWidth;
+    if (isPrev) {
+      window.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      window.scrollTo({ left: 100000, behavior: "smooth" });
+    }
   });
 
   return (
