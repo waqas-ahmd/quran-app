@@ -102,8 +102,7 @@ const Navbar = ({
             </MyTooltip>
           </div>
           <div className="urdu">
-            {pageNum + 1}
-            {pageNum} : صفحہ
+            {pageNum + 1}-{pageNum} : صفحہ
           </div>
           <div className="nav-icon">
             <MyTooltip title="Previous Page">
