@@ -89,7 +89,7 @@ const Navbar = ({
               <ChevronLeftRoundedIcon onClick={nextPara} />
             </MyTooltip>
           </div>
-          <div className="urdu">{paraNum} : پارہ نمبر</div>
+          <div className="urdu">{paraNum} : پارہ</div>
           <div className="nav-icon">
             <MyTooltip title="Previous Chapter">
               <ChevronRightRoundedIcon onClick={prevPara} />
@@ -102,7 +102,8 @@ const Navbar = ({
             </MyTooltip>
           </div>
           <div className="urdu">
-            {pageNum + 1}-{pageNum} : صفحہ نمبر
+            {pageNum + 1}
+            {pageNum} : صفحہ
           </div>
           <div className="nav-icon">
             <MyTooltip title="Previous Page">
