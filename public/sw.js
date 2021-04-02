@@ -23,7 +23,7 @@ this.addEventListener("install", (e) => {
         "https://quran16.netlify.app/",
         "/static/css/main.f98ba09b.chunk.css",
         "/static/js/2.b02f468c.chunk.js",
-        "/static/js/main.3c9740c1.chunk.js",
+        "/static/js/main.64315724.chunk.js",
         "/static/media/mosque.1a799f13.jpg",
         "manifest.json",
         "sw.js",
