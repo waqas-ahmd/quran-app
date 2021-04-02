@@ -25,9 +25,11 @@ const Page = ({ fullscreen }) => {
     location > 1 &&
     navigate(`/page/${location - 2}`, { state: { isPrev: true } });
   const nextPara = () =>
-    paraNum < 30 && navigate(`/page/${PARAS_PAGES[paraNum]}`);
+    paraNum < 30 &&
+    navigate(`/page/${PARAS_PAGES[paraNum]}`, { state: { isPrev: true } });
   const prevPara = () =>
-    paraNum > 1 && navigate(`/page/${PARAS_PAGES[paraNum - 2]}`);
+    paraNum > 1 &&
+    navigate(`/page/${PARAS_PAGES[paraNum - 2]}`, { state: { isPrev: true } });
 
   const savePage = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY_PAGES, location);
